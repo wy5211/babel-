@@ -6,3 +6,7 @@ class Person {
     console.log(this.name);
   }
 }
+
+const person = new Person('张三')
+
+console.log(person.say());

@@ -18,10 +18,29 @@
       }
     }
   ]],
+}
+```
+
+3. 按需加载
+```js
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": {
+          "version": 3
+        }
+      }
+    ]
+  ],
   "plugins": [
+    "@babel/plugin-transform-runtime"
   ]
 }
 ```
+
 
 
 ```js

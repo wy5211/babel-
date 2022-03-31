@@ -1,19 +1,24 @@
-import '@babel/polyfill';
+import '@babel/polyfill'
 
 const fn = () => {
-  return new Promise((resolve, reject) => {
-    resolve({ success: true, result: [7, 8, 9] });
-  });
+  console.log('1')
 };
 
-const arr = Array.from([1, 2, 3]);
 
-const list = [4, 5, 6].map((item) => item);
+const arr = [1,2,3]
+const list = [...arr];
+console.log(list);
 
-const getList = async () => {
-  const res = await fn();
-  const newList = [...arr, ...list, ...res?.result];
-  console.log('new List', newList);
-};
+const obj = { a: 1 };
+const copy_obj = { ...obj, b: 2 };
 
-getList();
+console.log(Array.from([1,2,3]))
+
+const symbol = Symbol('sybmol_demo');
+console.log(symbol);
+
+for (let item of list) {
+  console.log(item);
+}
+
+

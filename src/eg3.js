@@ -6,3 +6,7 @@ class Animal {
     console.log(this.name);
   }
 }
+
+const animal = new Animal('李四')
+
+console.log(animal.say());
